@@ -33,26 +33,26 @@ class Application
     resp.finish
   end
   
-  # def display_cart
-  #   if @@cart.empty?
-  #     return "Your cart is empty."
-  #   end
-  #   header = "" 
-  #   @@cart.each.with_index do |item, index|
-  #     header += "#{item}\n"
-  #   end
-  #   return header
-  # end
-  
   def display_cart
     if @@cart.empty?
       return "Your cart is empty."
-    else
-      @@cart.each do |item|
-        "#{item}\n"
     end
-    binding.pry
+    header = "" 
+    @@cart.each.with_index do |item, index|
+      header += "#{item}\n"
+    end
+    return header
   end
+  
+  # def display_cart
+  #   if @@cart.empty?
+  #     return "Your cart is empty."
+  #   else
+  #     @@cart.each do |item|
+  #       "#{item}\n"
+  #   end
+  #   binding.pry
+  # end
 
   # def display_cart
   #   if @@cart.empty?

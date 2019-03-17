@@ -43,17 +43,7 @@ class Application
     return header
   end
   
-  # def display_cart
-  #   if @@cart.empty?
-  #     return "Your cart is empty."
-  #   else
-  #     @@cart.each do |item|
-  #       "#{item}\n"
-  #   end
-  #   binding.pry
-  # end
-
-  # def display_cart
+    # def display_cart
   #   if @@cart.empty?
   #     return "Your cart is empty."
   #   end

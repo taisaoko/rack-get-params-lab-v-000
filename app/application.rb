@@ -1,3 +1,4 @@
+require "pry"
 class Application
 
   @@items = ["Apples","Carrots","Pears"] #class variable
@@ -50,19 +51,20 @@ class Application
       @@cart.each do |item|
         "#{item}\n"
     end
+    binding.pry
   end
 
-  def display_cart
-    if @@cart.empty?
-      return "Your cart is empty."
-    end
-    header = "" # "Your cart items are:\n ---------------------\n"
-    @@cart.each.with_index do |item, index|
-      # header += "#{index + 1}. #{item}\n"
-      header += "#{item}\n"
-    end
-    return header
-  end
+  # def display_cart
+  #   if @@cart.empty?
+  #     return "Your cart is empty."
+  #   end
+  #   header = "" # "Your cart items are:\n ---------------------\n"
+  #   @@cart.each.with_index do |item, index|
+  #     # header += "#{index + 1}. #{item}\n"
+  #     header += "#{item}\n"
+  #   end
+  #   return header
+  # end
 
   def handle_search(search_term)
     if @@items.map{|i| i.downcase}.include?(search_term.downcase)

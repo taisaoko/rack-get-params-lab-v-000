@@ -37,7 +37,7 @@ class Application
       return "Your cart is empty."
     end
     header = "" 
-    @@cart.each.with_index do |item, index|
+    @@cart.each do |item|
       header += "#{item}\n"
     end
     return header
